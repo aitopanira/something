@@ -1,0 +1,893 @@
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:25:18 172.31.255.1:root source /etc/profile
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:25:58 172.31.255.1:root history
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:26:31 172.31.255.1:root history >> /R
+    1  2023-02-23 13:18:21 172.31.255.1:root hostname -I
+    2  2023-02-23 13:18:21 172.31.255.1:root hostname
+    3  2023-02-23 13:18:21 172.31.255.1:root yum install -y epel-release 
+    4  2023-02-23 13:18:21 172.31.255.1:root yum instlal -y ansible
+    5  2023-02-23 13:18:21 172.31.255.1:root yum install -y ansible
+    6  2023-02-23 13:18:21 172.31.255.1:root yum install -y ansible git 
+    7  2023-02-23 13:18:21 172.31.255.1:root ssh-keygen -t rsa
+    8  2023-02-23 13:18:21 172.31.255.1:root cd /root/.ssh/
+    9  2023-02-23 13:18:21 172.31.255.1:root ls
+   10  2023-02-23 13:18:21 172.31.255.1:root cat id_rsa.pub 
+   11  2023-02-23 13:18:21 172.31.255.1:root ls
+   12  2023-02-23 13:18:21 172.31.255.1:root cat id_rsa
+   13  2023-02-23 13:18:21 172.31.255.1:root cd ~
+   14  2023-02-23 13:18:21 172.31.255.1:root ls
+   15  2023-02-23 13:18:21 172.31.255.1:root git clone git@github.com:husxwy/ansible.git
+   16  2023-02-23 13:18:21 172.31.255.1:root history 
+   17  2023-02-23 13:18:21 172.31.255.1:root sed -i 's/^HISTSIZE=1000/HISTSIZE=20000/' /etc/profile
+   18  2023-02-23 13:18:21 172.31.255.1:root  source /etc/profile
+   19  2023-02-23 13:18:21 172.31.255.1:root echo $HISTSIZE
+   20  2023-02-23 13:18:21 172.31.255.1:root  cat >> /etc/bashrc << "EOF"      HISTFILESIZE=40000
+   21  2023-02-23 13:18:21 172.31.255.1:root       HISTSIZE=40000
+   22  2023-02-23 13:18:21 172.31.255.1:root       USER_IP=`who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g'`
+   23  2023-02-23 13:18:21 172.31.255.1:root       if [ -z $USER_IP ]
+   24  2023-02-23 13:18:21 172.31.255.1:root       then
+   25  2023-02-23 13:18:21 172.31.255.1:root         USER_IP=`hostname`
+   26  2023-02-23 13:18:21 172.31.255.1:root       fi
+   27  2023-02-23 13:18:21 172.31.255.1:root       HISTTIMEFORMAT="%F %T $USER_IP:`whoami` "
+   28  2023-02-23 13:18:21 172.31.255.1:root       export HISTTIMEFORMAT
+   29  2023-02-23 13:18:21 172.31.255.1:root       EOF
+   30  2023-02-23 13:18:21 172.31.255.1:root cat >> /etc/bashrc << "EOF"HISTFILESIZE=40000
+   31  2023-02-23 13:18:21 172.31.255.1:root HISTSIZE=40000
+   32  2023-02-23 13:18:21 172.31.255.1:root USER_IP=`who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g'`
+   33  2023-02-23 13:18:21 172.31.255.1:root if [ -z $USER_IP ]
+   34  2023-02-23 13:18:21 172.31.255.1:root then
+   35  2023-02-23 13:18:21 172.31.255.1:root   USER_IP=`hostname`
+   36  2023-02-23 13:18:21 172.31.255.1:root fi
+   37  2023-02-23 13:18:21 172.31.255.1:root HISTTIMEFORMAT="%F %T $USER_IP:`whoami` "
+   38  2023-02-23 13:18:21 172.31.255.1:root export HISTTIMEFORMAT
+   39  2023-02-23 13:18:21 172.31.255.1:root EOF
+   40  2023-02-23 13:18:21 172.31.255.1:root history 
+   41  2023-02-23 13:18:21 172.31.255.1:root cat /etc/bashrc
+   42  2023-02-23 13:18:21 172.31.255.1:root source  /etc/bashrc 
+   43  2022-08-11 07:13:28 172.31.255.1:root history 
+   44  2022-08-11 07:14:11 172.31.255.1:root rpm -ql ansible
+   45  2022-08-11 07:15:35 172.31.255.1:root cd /etc/ansible/
+   46  2022-08-11 07:15:36 172.31.255.1:root ls
+   47  2022-08-11 07:15:39 172.31.255.1:root tree
+   48  2022-08-11 07:15:43 172.31.255.1:root yum install -y  tree
+   49  2022-08-11 07:15:51 172.31.255.1:root tree
+   50  2022-08-19 20:38:57 172.31.255.1:root yum install glibc-devel
+   51  2022-08-19 20:40:35 172.31.255.1:root cd /usr/local/src/
+   52  2022-08-19 20:40:39 172.31.255.1:root wget http://www.datsi.fi.upm.es/~frosal/sources/shc-3.8.9.tgz
+   53  2022-08-19 20:40:47 172.31.255.1:root yum install -y wget
+   54  2022-08-19 20:40:52 172.31.255.1:root wget http://www.datsi.fi.upm.es/~frosal/sources/shc-3.8.9.tgz
+   55  2022-08-19 20:41:02 172.31.255.1:root  tar -zvxf shc-3.8.9.tgz
+   56  2022-08-19 20:41:06 172.31.255.1:root cd shc-3.8.9
+   57  2022-08-19 20:41:16 172.31.255.1:root mkdir -p /usr/local/man/man1
+   58  2022-08-19 20:41:22 172.31.255.1:root cp shc.README /usr/local/man/man1/
+   59  2022-08-19 20:41:37 172.31.255.1:root  make install
+   60  2022-08-19 20:41:51 172.31.255.1:root yum -y install gcc
+   61  2022-08-19 20:42:03 172.31.255.1:root make install
+   62  2022-08-19 20:42:27 172.31.255.1:root cd /tmp/
+   63  2022-08-19 20:42:28 172.31.255.1:root ls
+   64  2022-08-19 20:42:34 172.31.255.1:root vim test.sh
+   65  2022-08-19 20:43:22 172.31.255.1:root sh test.sh 
+   66  2022-08-19 20:43:30 172.31.255.1:root sh test.sh 1 2 3 4
+   67  2022-08-19 20:43:39 172.31.255.1:root shc -r -f text.sh
+   68  2022-08-19 20:43:57 172.31.255.1:root ls
+   69  2022-08-19 20:44:03 172.31.255.1:root shc -r -f text.sh
+   70  2022-08-19 20:44:38 172.31.255.1:root sch -T -f test.sh 
+   71  2022-08-19 20:44:46 172.31.255.1:root shc -T -f test.sh 
+   72  2022-08-19 20:44:48 172.31.255.1:root ls
+   73  2022-08-19 20:44:54 172.31.255.1:root cat test.sh
+   74  2022-08-19 20:45:01 172.31.255.1:root cat test.sh.x
+   75  2022-08-19 20:45:29 172.31.255.1:root ls
+   76  2022-08-19 20:45:36 172.31.255.1:root ./test.sh.x 1 2 3
+   77  2022-08-19 20:45:53 172.31.255.1:root cat /etc/redhat-release 
+   78  2022-08-19 20:47:29 172.31.255.1:root history 
+   79  2022-08-19 20:49:11 172.31.255.1:root cat test.sh
+   80  2022-08-19 20:50:18 172.31.255.1:root ls
+   81  2022-08-19 20:51:02 172.31.255.1:root mv test.sh.x test
+   82  2022-08-19 20:51:07 172.31.255.1:root ./test 1 2 3 4
+   83  2022-08-19 22:14:26 172.31.255.1:root vim prod_docker_tar
+   84  2022-08-19 22:15:09 172.31.255.1:root shc -T -f  prod_docker_tar 
+   85  2022-08-19 22:15:11 172.31.255.1:root ls
+   86  2022-08-19 22:18:21 172.31.255.1:root ./prod_docker_tar.x 
+   87  2022-08-19 22:18:37 172.31.255.1:root cd  cd /home/aspire/crcp-prod/tar/20220819221821  
+   88  2022-08-19 22:18:39 172.31.255.1:root  cd /home/aspire/crcp-prod/tar/20220819221821  
+   89  2022-08-19 22:18:40 172.31.255.1:root ls
+   90  2022-08-19 22:20:46 172.31.255.1:root cd -
+   91  2022-08-19 22:20:47 172.31.255.1:root ll
+   92  2022-08-19 22:20:55 172.31.255.1:root md5sum prod_docker_tar.x
+   93  2022-08-19 22:21:28 172.31.255.1:root ls
+   94  2022-08-19 22:21:39 172.31.255.1:root vim prod_docker_tar prod_docker_tar.sh
+   95  2022-08-19 22:21:55 172.31.255.1:root mv prod_docker_tar prod_docker_tar.sh
+   96  2022-08-19 22:22:08 172.31.255.1:root shc -T -f  prod_docker_tar.sh
+   97  2022-08-19 22:22:09 172.31.255.1:root ll
+   98  2022-08-19 22:22:18 172.31.255.1:root md5sum prod_docker_tar.sh.x
+   99  2022-08-19 22:22:30 172.31.255.1:root ./prod_docker_tar.sh.x 
+  100  2022-08-19 22:49:24 172.31.255.1:root ls
+  101  2022-08-19 22:49:36 172.31.255.1:root sh test.sh.x.44
+  102  2022-10-19 13:43:19 172.31.255.1:root docker pull
+  103  2022-10-19 13:43:26 172.31.255.1:root yum install -y docker-cee
+  104  2022-10-19 13:43:31 172.31.255.1:root yum install -y docker-ce
+  105  2022-10-19 13:46:24 172.31.255.1:root if [ ! -f /etc/yum.repos.d/docker.repo ]; then curl http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo -o /etc/yum.repos.d/docker.repo; fi
+  106  2022-10-19 13:46:31 172.31.255.1:root yum install -y docker-ce
+  107  2022-10-19 13:48:46 172.31.255.1:root docker pull questdb/questdb:6.0.4
+  108  2022-10-19 13:48:54 172.31.255.1:root systemctl status docker
+  109  2022-10-19 13:49:04 172.31.255.1:root systemctl start docker
+  110  2022-10-19 13:49:07 172.31.255.1:root docker pull questdb/questdb:6.0.4
+  111  2022-10-19 13:53:35 172.31.255.1:root docker save -o questdb_6.0.4.tar questdb/questdb:6.0.4
+  112  2022-10-19 14:00:44 172.31.255.1:root questdb/questdb:6.0.5
+  113  2022-10-19 14:00:49 172.31.255.1:root docker pull questdb/questdb:6.0.5
+  114  2022-10-19 14:01:42 172.31.255.1:root docker save -o questdb_6.0.5.tar questdb/questdb:6.0.5
+  115  2022-10-19 16:52:35 172.31.255.1:root docker pull openebs/node-disk-exporter:2.0.0
+  116  2022-10-19 16:53:47 172.31.255.1:root docker save -o node-disk-exporter_2.0.0.tar openebs/node-disk-exporter:2.0.0
+  117  2022-10-19 16:57:43 172.31.255.1:root docker pull openebs/node-disk-operator:2.0.0
+  118  2022-10-19 16:59:04 172.31.255.1:root docker save -o node-disk-operator_2.0.0.tar openebs/node-disk-operator:2.0.0
+  119  2022-10-20 05:02:18 172.31.255.1:root free -m
+  120  2022-10-20 05:04:19 172.31.255.1:root  wget https://arthas.aliyun.com/math-game.jar
+  121  2022-10-20 05:04:33 172.31.255.1:root  wget https://arthas.aliyun.com/math-game.jar --no-check-certificate
+  122  2022-10-20 05:04:50 172.31.255.1:root java -jar math-game.jar
+  123  2022-10-20 05:06:40 172.31.255.1:root ip  a
+  124  2022-10-20 05:07:40 172.31.255.1:root cat .ssh/authorized_keys 
+  125  2022-10-20 05:09:07 172.31.255.1:root python
+  126  2022-10-20 05:09:13 172.31.255.1:root /usr/bin/python3
+  127  2022-10-20 05:15:01 172.31.255.1:root python3
+  128  2022-10-20 05:17:01 172.31.255.1:root java
+  129  2022-10-20 05:18:08 172.31.255.1:root wget https://arthas.aliyun.com/arthas-boot.jar java -jar arthas-boot.jar --no-check-certificate 
+  130  2022-10-20 05:18:17 172.31.255.1:root wget https://arthas.aliyun.com/arthas-boot.jar
+  131  2022-10-20 05:18:24 172.31.255.1:root wget https://arthas.aliyun.com/arthas-boot.jar --no-check-certificate
+  132  2022-10-20 05:18:52 172.31.255.1:root java -jar math-game.jar
+  133  2022-10-20 05:23:08 172.31.255.1:root nohup java -jar math-game.jar >> math-game.out 2>&1 &
+  134  2022-10-20 05:23:11 172.31.255.1:root jps
+  135  2022-10-20 05:23:16 172.31.255.1:root java
+  136  2022-10-20 05:23:18 172.31.255.1:root jps
+  137  2022-10-20 05:23:37 172.31.255.1:root  whereis java
+  138  2022-10-20 05:23:46 172.31.255.1:root which java
+  139  2022-10-20 05:24:01 172.31.255.1:root cat /etc/profile
+  140  2022-10-20 05:24:14 172.31.255.1:root java --version
+  141  2022-10-20 05:24:18 172.31.255.1:root java -versio
+  142  2022-10-20 05:24:22 172.31.255.1:root java -version
+  143  2022-10-20 05:25:01 172.31.255.1:root cat /etc/profile.d/java_home.sh
+  144  2022-10-20 05:25:06 172.31.255.1:root export JAVA_HOME=/usr/java/jdk1.8.0_202
+  145  2022-10-20 05:25:06 172.31.255.1:root export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+  146  2022-10-20 05:25:07 172.31.255.1:root export PATH=$JAVA_HOME/bin:$PATH
+  147  2022-10-20 05:25:09 172.31.255.1:root jps
+  148  2022-10-20 05:25:31 172.31.255.1:root jps -q
+  149  2022-10-20 05:25:37 172.31.255.1:root jps -m
+  150  2022-10-20 05:25:52 172.31.255.1:root jps -l
+  151  2022-10-20 05:26:00 172.31.255.1:root jps -v
+  152  2022-10-20 05:26:14 172.31.255.1:root jps  --help
+  153  2022-10-20 05:26:32 172.31.255.1:root jps  -V
+  154  2022-10-20 05:26:36 172.31.255.1:root jps  -q
+  155  2022-10-20 05:26:40 172.31.255.1:root jps  -m
+  156  2022-10-20 05:26:43 172.31.255.1:root jps  -l
+  157  2022-10-20 05:26:51 172.31.255.1:root jps  -v
+  158  2022-10-20 05:27:55 172.31.255.1:root nohup java -jar arthas-boot.jar >> arthas-boot.out 2>&1 &
+  159  2022-10-20 05:28:03 172.31.255.1:root jps -l
+  160  2022-10-20 05:28:21 172.31.255.1:root nohup java -jar arthas-boot.jar >> arthas-boot.out 2>&1 &
+  161  2022-10-20 05:28:25 172.31.255.1:root jps -l
+  162  2022-10-20 05:28:38 172.31.255.1:root moree arthas-boot.out 
+  163  2022-10-20 05:28:47 172.31.255.1:root more arthas-boot.out 
+  164  2022-10-20 05:29:06 172.31.255.1:root ps -ef |grep java
+  165  2022-10-20 05:29:23 172.31.255.1:root java -jar arthas-boot.jar
+  166  2022-10-20 05:30:58 172.31.255.1:root ll -h
+  167  2022-10-20 05:31:20 172.31.255.1:root java -jar arthas-boot.jar --repo-mirror aliyun --use-http
+  168  2022-10-20 05:31:54 172.31.255.1:root curl -L https://arthas.aliyun.com/install.sh | sh
+  169  2022-10-20 05:33:06 172.31.255.1:root wget https://github.com/alibaba/arthas/releases/download/arthas-all-3.6.7/arthas-bin.zip
+  170  2022-10-20 05:33:14 172.31.255.1:root ls
+  171  2022-10-20 05:33:23 172.31.255.1:root unzip  arthas-bin.zip 
+  172  2022-10-20 05:34:09 172.31.255.1:root yum install -y unzip
+  173  2022-10-20 05:34:47 172.31.255.1:root unzip  arthas-bin.zip 
+  174  2022-10-20 05:35:00 172.31.255.1:root lss
+  175  2022-10-20 05:35:01 172.31.255.1:root ls
+  176  2022-10-20 05:35:07 172.31.255.1:root jps  -l
+  177  2022-10-20 05:35:16 172.31.255.1:root java -jar arthas-boot.jar
+  178  2022-10-20 05:58:08 172.31.255.1:root java -jar arthas-boot.jar --target-ip 0.0.0.0
+  179  2022-10-20 07:48:46 172.31.255.1:root jps -l
+  180  2022-10-20 11:29:21 172.31.255.1:root docker
+  181  2022-10-20 11:29:25 172.31.255.1:root ls
+  182  2022-10-20 11:30:00 172.31.255.1:root cd ansible/
+  183  2022-10-20 11:30:01 172.31.255.1:root ls
+  184  2022-10-20 11:30:14 172.31.255.1:root cat .git
+  185  2022-10-20 11:30:18 172.31.255.1:root cat .git/config 
+  186  2022-10-20 11:30:36 172.31.255.1:root cat ansible.cfg 
+  187  2022-10-20 11:31:37 172.31.255.1:root git pull
+  188  2022-10-20 11:32:11 172.31.255.1:root ls
+  189  2022-10-20 11:32:41 172.31.255.1:root cat ansible.cfg 
+  190  2022-10-20 12:29:16 172.31.255.1:root lsof -i:3658
+  191  2022-10-20 12:29:52 172.31.255.1:root jps
+  192  2022-10-20 12:29:56 172.31.255.1:root jps -l
+  193  2022-10-20 12:35:15 172.31.255.1:root ip a
+  194  2022-10-20 12:38:23 172.31.255.1:root jps  -l
+  195  2022-10-20 12:38:50 172.31.255.1:root ss -nlp
+  196  2022-10-20 12:39:10 172.31.255.1:root ss -nlp|grep 3658
+  197  2022-10-20 12:39:21 172.31.255.1:root jps -l
+  198  2022-10-20 12:40:14 172.31.255.1:root ps -ef |grep java
+  199  2022-10-20 12:43:19 172.31.255.1:root ls
+  200  2022-10-20 12:43:23 172.31.255.1:root cd ..
+  201  2022-10-20 12:43:23 172.31.255.1:root ls
+  202  2022-10-20 12:43:34 172.31.255.1:root ll arthas-tunnel-server
+  203  2022-10-20 12:45:18 172.31.255.1:root jps
+  204  2022-10-20 12:46:09 172.31.255.1:root jps -l
+  205  2022-10-20 12:47:03 172.31.255.1:root lsof -i:3658
+  206  2022-10-20 12:47:18 172.31.255.1:root ss -nlp|grep 3658
+  207  2022-10-20 12:47:58 172.31.255.1:root ls
+  208  2022-10-20 12:48:12 172.31.255.1:root java -jar arthas-boot.jar 
+  209  2022-10-20 12:48:25 172.31.255.1:root jps -l
+  210  2022-10-20 12:48:37 172.31.255.1:root jps -l
+  211  2022-10-20 12:48:42 172.31.255.1:root lsof -i:3658
+  212  2022-10-20 12:49:14 172.31.255.1:root java -jar arthas-boot.jar
+  213  2022-10-20 12:49:34 172.31.255.1:root lsof -i:3658
+  214  2022-10-20 12:49:39 172.31.255.1:root jps -l
+  215  2022-10-20 12:50:20 172.31.255.1:root lsof -i:3658
+  216  2022-10-20 12:50:26 172.31.255.1:root java -jar arthas-boot.jar
+  217  2022-10-20 05:19:06 172.31.255.1:root java -jar arthas-boot.jar
+  218  2022-10-20 05:19:50 172.31.255.1:root wget https://arthas.aliyun.com/api/latest_version
+  219  2022-10-20 05:19:58 172.31.255.1:root wget https://arthas.aliyun.com/api/latest_version `--no-check-certificate
+  220  2022-10-20 05:20:09 172.31.255.1:root wget https://arthas.aliyun.com/api/latest_version --no-check-certificate
+  221  2022-10-20 05:20:17 172.31.255.1:root cat latest_version 
+  222  2022-10-20 05:20:31 172.31.255.1:root java -jar arthas-boot.jar
+  223  2022-10-20 05:21:02 172.31.255.1:root yum  install -y  nginx
+  224  2022-10-20 05:47:18 172.31.255.1:root wget https://github.com/hengyunabc/spring-boot-inside/raw/master/demo-arthas-spring-boot/demo-arthas-spring-boot.jar 
+  225  2022-10-20 05:48:51 172.31.255.1:root wget https://raw.githubusercontent.com/hengyunabc/spring-boot-inside/master/demo-arthas-spring-boot/demo-arthas-spring-boot.jar
+  226  2022-10-20 05:49:43 172.31.255.1:root wget https://github.com/hengyunabc/spring-boot-inside/raw/master/demo-arthas-spring-boot/demo-arthas-spring-boot.jar 
+  227  2022-10-20 05:53:50 172.31.255.1:root nohup java -jar demo-arthas-spring-boot.jar >> demo-arthas-spring-boot.out 2>&1 &
+  228  2022-10-20 05:53:54 172.31.255.1:root jps -l
+  229  2022-10-20 05:54:10 172.31.255.1:root lsof -i:80
+  230  2022-10-20 05:54:20 172.31.255.1:root yum install -y lsof
+  231  2022-10-20 05:55:55 172.31.255.1:root lsof -i:80
+  232  2022-10-20 05:56:03 172.31.255.1:root jps -l
+  233  2022-10-20 05:56:19 172.31.255.1:root ip a
+  234  2022-10-20 06:09:13 172.31.255.1:root tail -f demo-arthas-spring-boot.out 
+  235  2022-10-20 06:15:46 172.31.255.1:root curl http://localhost/user/0
+  236  2022-10-20 06:29:52 172.31.255.1:root lsof -i:8563
+  237  2022-10-20 06:29:56 172.31.255.1:root jps  -l
+  238  2022-10-20 11:03:21 172.31.255.1:root free -m
+  239  2022-10-20 12:51:31 172.31.255.1:root lsof -i:3658
+  240  2022-10-20 12:54:10 172.31.255.1:root ./as.sh 
+  241  2022-10-20 12:55:14 172.31.255.1:root ./as.sh 4282@172.31.255.251:3658
+  242  2022-10-20 05:21:29 172.31.255.1:root ping www.baidu.com
+  243  2023-02-23 11:38:47 172.31.255.1:root hostname
+  244  2023-02-23 11:45:37 172.31.255.1:root cd /app/
+  245  2023-02-23 11:45:37 172.31.255.1:root ls
+  246  2023-02-23 11:45:39 172.31.255.1:root cd mysql/
+  247  2023-02-23 11:45:40 172.31.255.1:root ls
+  248  2023-02-23 11:45:42 172.31.255.1:root cd ..
+  249  2023-02-23 11:45:42 172.31.255.1:root ls
+  250  2023-02-23 11:45:44 172.31.255.1:root cd software/mysql/
+  251  2023-02-23 11:45:46 172.31.255.1:root ls
+  252  2023-02-23 11:45:48 172.31.255.1:root ccdd ..
+  253  2023-02-23 11:45:49 172.31.255.1:root ls
+  254  2023-02-23 11:45:51 172.31.255.1:root cd ..
+  255  2023-02-23 11:45:52 172.31.255.1:root ls
+  256  2023-02-23 11:45:53 172.31.255.1:root ccd ..
+  257  2023-02-23 11:45:59 172.31.255.1:root cd ...
+  258  2023-02-23 11:46:01 172.31.255.1:root cd ..
+  259  2023-02-23 11:46:01 172.31.255.1:root ls
+  260  2023-02-23 11:48:02 172.31.255.1:root systemctl status mysqld
+  261  2023-02-23 11:48:07 172.31.255.1:root systemctl status mysql
+  262  2023-02-23 11:48:23 172.31.255.1:root ps -ef |grep mysql
+  263  2023-02-23 11:48:40 172.31.255.1:root ll /data/mysql/run/mysqld.pid
+  264  2023-02-23 11:48:55 172.31.255.1:root ls
+  265  2023-02-23 11:48:58 172.31.255.1:root pwd
+  266  2023-02-23 11:49:01 172.31.255.1:root df -h
+  267  2023-02-23 11:49:07 172.31.255.1:root cd /data/
+  268  2023-02-23 11:49:08 172.31.255.1:root l
+  269  2023-02-23 11:49:09 172.31.255.1:root ls
+  270  2023-02-23 11:49:10 172.31.255.1:root cd mysql/
+  271  2023-02-23 11:49:11 172.31.255.1:root ls
+  272  2023-02-23 11:49:14 172.31.255.1:root cd data/
+  273  2023-02-23 11:49:15 172.31.255.1:root ls
+  274  2023-02-23 11:49:17 172.31.255.1:root cd ..
+  275  2023-02-23 11:49:51 172.31.255.1:root cat /etc/my.cnf.d
+  276  2023-02-23 11:50:01 172.31.255.1:root cat /etc/my.cnf.d/mysql-clients.cnf 
+  277  2023-02-23 11:50:46 172.31.255.1:root ls
+  278  2023-02-23 11:50:50 172.31.255.1:root cd /app/
+  279  2023-02-23 11:50:50 172.31.255.1:root ls
+  280  2023-02-23 11:51:03 172.31.255.1:root sh software/mysql/mysql_install.sh 
+  281  2023-02-23 11:52:05 172.31.255.1:root yum list libaio -y
+  282  2023-02-23 11:52:30 172.31.255.1:root sh software/mysql/mysql_install.sh 
+  283  2023-02-23 11:52:50 172.31.255.1:root ls /data/mysql/run/
+  284  2023-02-23 11:54:09 172.31.255.1:root ls
+  285  2023-02-23 11:54:10 172.31.255.1:root ll
+  286  2023-02-23 11:54:15 172.31.255.1:root su -  mysql 
+  287  2023-02-23 11:55:08 172.31.255.1:root yum install -y libaio
+  288  2023-02-23 11:55:15 172.31.255.1:root sh software/mysql/mysql_install.sh 
+  289  2023-02-23 11:57:27 172.31.255.1:root mysqlinitpasswd=`grep 'temporary password' /var/log/mysqld.log |awk '{print $11}'`
+  290  2023-02-23 11:57:50 172.31.255.1:root grep 'temporary password' /data/mysql/logs/mysqld.log 
+  291  2023-02-23 11:58:49 172.31.255.1:root cd /data/
+  292  2023-02-23 11:58:50 172.31.255.1:root ls
+  293  2023-02-23 11:58:52 172.31.255.1:root cd mysql/
+  294  2023-02-23 11:58:53 172.31.255.1:root lss
+  295  2023-02-23 11:58:54 172.31.255.1:root lls
+  296  2023-02-23 11:58:55 172.31.255.1:root ls
+  297  2023-02-23 11:58:57 172.31.255.1:root cd run/
+  298  2023-02-23 11:58:58 172.31.255.1:root ls
+  299  2023-02-23 11:58:59 172.31.255.1:root cd ..
+  300  2023-02-23 11:59:00 172.31.255.1:root ls
+  301  2023-02-23 11:59:01 172.31.255.1:root cd data/
+  302  2023-02-23 11:59:02 172.31.255.1:root ls
+  303  2023-02-23 11:59:09 172.31.255.1:root cd mysql/
+  304  2023-02-23 11:59:09 172.31.255.1:root ls
+  305  2023-02-23 11:59:11 172.31.255.1:root cd ..
+  306  2023-02-23 11:59:12 172.31.255.1:root ls
+  307  2023-02-23 11:59:14 172.31.255.1:root cd ..
+  308  2023-02-23 11:59:15 172.31.255.1:root ls
+  309  2023-02-23 11:59:25 172.31.255.1:root ls /var/lib/mysql/mysql.sock 
+  310  2023-02-23 12:01:23 172.31.255.1:root ls
+  311  2023-02-23 12:01:25 172.31.255.1:root tree
+  312  2023-02-23 12:01:42 172.31.255.1:root cd /app/
+  313  2023-02-23 12:01:44 172.31.255.1:root tree
+  314  2023-02-23 12:03:16 172.31.255.1:root cd /data/
+  315  2023-02-23 12:03:16 172.31.255.1:root ls
+  316  2023-02-23 12:03:18 172.31.255.1:root cd mysql/
+  317  2023-02-23 12:03:19 172.31.255.1:root ls
+  318  2023-02-23 12:03:23 172.31.255.1:root ll
+  319  2023-02-23 12:03:25 172.31.255.1:root ll -a
+  320  2023-02-23 12:04:50 172.31.255.1:root ps  -ef |grep
+  321  2023-02-23 12:04:54 172.31.255.1:root ps  -ef |grep mysql
+  322  2023-02-23 12:05:45 172.31.255.1:root cd /data/mysql/logs
+  323  2023-02-23 12:05:46 172.31.255.1:root ls
+  324  2023-02-23 12:05:49 172.31.255.1:root cd ..
+  325  2023-02-23 12:06:07 172.31.255.1:root mysql -uroot -po%4Zvf;A#mc&
+  326  2023-02-23 12:06:18 172.31.255.1:root  mysql -uroot -p
+  327  2023-02-23 12:06:34 172.31.255.1:root cd /app/mysql/bin/ 
+  328  2023-02-23 12:06:34 172.31.255.1:root ls
+  329  2023-02-23 12:06:39 172.31.255.1:root  mysql -uroot -p
+  330  2023-02-23 12:06:46 172.31.255.1:root ./mysql -uroot -p
+  331  2023-02-23 12:08:31 172.31.255.1:root find / -name mysql.sock
+  332  2023-02-23 12:09:55 172.31.255.1:root mysql -uroot -po%4Zvf;A#mc& -S /tmp/mysql.sock -e "set global validate_password_policy=0;set global validate_password_length=1;set global validate_password_policy=0;set global validate_password_length=1;set password = password('Z9G4K32b64CVZ');grant all privileges on *.* to 'root'@'%' identified by 'Z9G4K32b64CVZ';flush privileges;" --connect-expired-password
+  333  2023-02-23 12:10:14 172.31.255.1:root mysql -uroot -p'o%4Zvf;A#mc&' -S /tmp/mysql.sock -e "set global validate_password_policy=0;set global validate_password_length=1;set global validate_password_policy=0;set global validate_password_length=1;set password = password('Z9G4K32b64CVZ');grant all privileges on *.* to 'root'@'%' identified by 'Z9G4K32b64CVZ';flush privileges;" --connect-expired-password
+  334  2023-02-23 12:10:23 172.31.255.1:root ./mysql -uroot -p'o%4Zvf;A#mc&' -S /tmp/mysql.sock -e "set global validate_password_policy=0;set global validate_password_length=1;set global validate_password_policy=0;set global validate_password_length=1;set password = password('Z9G4K32b64CVZ');grant all privileges on *.* to 'root'@'%' identified by 'Z9G4K32b64CVZ';flush privileges;" --connect-expired-password
+  335  2023-02-23 12:10:37 172.31.255.1:root grep 'temporary password' /data/mysql/logs/mysqld.log 
+  336  2023-02-23 12:11:02 172.31.255.1:root ./mysql -uroot
+  337  2023-02-23 12:11:06 172.31.255.1:root ./mysql -uroot -p
+  338  2023-02-23 12:13:35 172.31.255.1:root ./mysql -uroot -p123456
+  339  2023-02-23 12:24:17 172.31.255.1:root cd /app/
+  340  2023-02-23 12:24:17 172.31.255.1:root ls
+  341  2023-02-23 12:24:36 172.31.255.1:root cd mysql/bin/
+  342  2023-02-23 12:24:36 172.31.255.1:root ls
+  343  2023-02-23 12:25:01 172.31.255.1:root ./mysqld stop
+  344  2023-02-23 12:25:09 172.31.255.1:root ps -ef |grep mysql
+  345  2023-02-23 12:25:16 172.31.255.1:root kill -9 5550
+  346  2023-02-23 12:25:18 172.31.255.1:root ps -ef |grep mysql
+  347  2023-02-23 12:25:31 172.31.255.1:root kill -9 5739
+  348  2023-02-23 12:25:33 172.31.255.1:root ps -ef |grep mysql
+  349  2023-02-23 12:29:06 172.31.255.1:root cd /apps/
+  350  2023-02-23 12:29:07 172.31.255.1:root ls
+  351  2023-02-23 12:29:09 172.31.255.1:root cd software/
+  352  2023-02-23 12:29:09 172.31.255.1:root ls
+  353  2023-02-23 12:29:17 172.31.255.1:root cat setpassword.sh 
+  354  2023-02-23 12:30:04 172.31.255.1:root ll  /var/log/mysqld.log
+  355  2023-02-23 12:30:57 172.31.255.1:root cd /
+  356  2023-02-23 12:31:01 172.31.255.1:root cd /root/
+  357  2023-02-23 12:31:01 172.31.255.1:root ls
+  358  2023-02-23 12:31:05 172.31.255.1:root rpm -ivh mysql57-community-release-el7.rpm
+  359  2023-02-23 12:31:15 172.31.255.1:root yum install mysql-server -y
+  360  2023-02-23 12:32:09 172.31.255.1:root systemctl start mysqld
+  361  2023-02-23 12:32:16 172.31.255.1:root systemctl enable mysqld
+  362  2023-02-23 12:32:25 172.31.255.1:root systemctl status mysqld
+  363  2023-02-23 12:32:46 172.31.255.1:root ps  -ef |grep mysql
+  364  2023-02-23 12:33:03 172.31.255.1:root ls /etc/rc.d/init.d/mysqld
+  365  2023-02-23 12:33:15 172.31.255.1:root systemctl status mysqld -l
+  366  2023-02-23 12:33:44 172.31.255.1:root systemctl stop mysqld
+  367  2023-02-23 12:33:53 172.31.255.1:root yum install mysql-server -y
+  368  2023-02-23 12:34:29 172.31.255.1:root yum -y install mysql-community-server --nogpgcheck
+  369  2023-02-23 12:35:26 172.31.255.1:root ps -ef |grep mysql
+  370  2023-02-23 12:35:34 172.31.255.1:root systemctl start mysqld
+  371  2023-02-23 12:35:45 172.31.255.1:root systemctl enable mysqld
+  372  2023-02-23 12:35:56 172.31.255.1:root systemctl status mysqld
+  373  2023-02-23 12:36:03 172.31.255.1:root systemctl status mysqld -l
+  374  2023-02-23 12:36:26 172.31.255.1:root sh /apps/software/setpassword.sh 
+  375  2023-02-23 12:36:51 172.31.255.1:root mysql -uroot -p
+  376  2023-02-23 12:38:13 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ!
+  377  2023-02-23 12:38:20 172.31.255.1:root mysql -uroot -p
+  378  2023-02-23 12:38:23 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ!
+  379  2023-02-23 12:39:07 172.31.255.1:root df -hh
+  380  2023-02-23 12:39:09 172.31.255.1:root df -h
+  381  2023-02-23 12:39:14 172.31.255.1:root cd /app
+  382  2023-02-23 12:39:14 172.31.255.1:root ls
+  383  2023-02-23 12:39:24 172.31.255.1:root rm -rf /app
+  384  2023-02-23 12:39:26 172.31.255.1:root ls
+  385  2023-02-23 12:39:31 172.31.255.1:root cd /apps/
+  386  2023-02-23 12:39:31 172.31.255.1:root ls
+  387  2023-02-23 12:39:33 172.31.255.1:root cd data/
+  388  2023-02-23 12:39:35 172.31.255.1:root ls
+  389  2023-02-23 12:39:38 172.31.255.1:root cd ..
+  390  2023-02-23 12:39:38 172.31.255.1:root ls
+  391  2023-02-23 12:39:41 172.31.255.1:root cd software/
+  392  2023-02-23 12:39:41 172.31.255.1:root ls
+  393  2023-02-23 12:39:43 172.31.255.1:root cd ...
+  394  2023-02-23 12:39:44 172.31.255.1:root ls
+  395  2023-02-23 12:39:45 172.31.255.1:root cd ..
+  396  2023-02-23 12:39:55 172.31.255.1:root df -h
+  397  2023-02-23 12:39:59 172.31.255.1:root cd /
+  398  2023-02-23 12:40:00 172.31.255.1:root ls
+  399  2023-02-23 12:40:04 172.31.255.1:root cd 
+  400  2023-02-23 12:40:08 172.31.255.1:root cd ~
+  401  2023-02-23 12:40:09 172.31.255.1:root ls
+  402  2023-02-23 12:41:52 172.31.255.1:root history 
+  403  2023-02-23 13:10:21 172.31.255.1:root mount -t vboxsf -o uid=1000,gid=1000,_netdev Synced /Synced
+  404  2023-02-23 13:12:47 172.31.255.1:root rm -f /etc/udev/rules.d/70-persistent-net.rules
+  405  2023-02-23 13:15:04 172.31.255.1:root yum -y update kernel
+  406  2023-02-23 13:18:27 172.31.255.1:root cd /Synced/
+  407  2023-02-23 13:18:28 172.31.255.1:root ls
+  408  2023-02-23 13:18:33 172.31.255.1:root touch 1.txt
+  409  2023-02-23 13:23:43 172.31.255.1:root vi /etc/profile
+  410  2023-02-23 13:25:18 172.31.255.1:root source /etc/profile
+  411  2023-02-23 13:25:58 172.31.255.1:root history  
+  412  2023-02-23 13:26:31 172.31.255.1:root history >> /R
+  413  2023-02-23 13:26:59 172.31.255.1:root history >> /Synced/history_cmd.log 
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:26:59 172.31.255.1:root history >> /Synced/history_cmd.log
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:28:19 172.31.255.1:root systemctl status mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:28:27 172.31.255.1:root lsof -i:3306
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:34:14 172.31.255.1:root mysql -uroot -e 'show databases'
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:34:58 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ! -e 'show databases'
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:36:45 172.31.255.1:root mkdir /Synced/mysqlback
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:36:52 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ! -e 'show databases'|grep -Ev '^(Database|information_schema|performance_schema)$'|while read db;do mysqldump -B $db | gzip > /Synced/mysqlback/$db.sql.gz;done
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:36:52 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ! -e 'show databases'|grep -Ev '^(Database|information_schema|performance_schema)$'|while read db;do mysqldump -B $db | gzip > /Synced/mysqlback/$db.sql.gz;done
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:36:52 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ! -e 'show databases'|grep -Ev '^(Database|information_schema|performance_schema)$'|while read db;do mysqldump -B $db | gzip > /Synced/mysqlback/$db.sql.gz;done
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:37:21 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ! -e 'show databases'
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:38:13 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ! -e 'show databases'|grep -Ev '^(Database|information_schema|performance_schema)$'|while read db;do mysqldump –uroot -pZ9G4K32b64CVZ! -B $db | gzip > /Synced/mysqlback/$db.sql.gz;done
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:39:54 172.31.255.1:root mysqldump –uroot -pZ9G4K32b64CVZ! -B test2
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:40:08 172.31.255.1:root mysqldump -B test2
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:41:39 172.31.255.1:root mysqldump -hlocalhost -B test2
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:42:01 172.31.255.1:root mysqldump -hlocalhost –uroot -pZ9G4K32b64CVZ! -B test2
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:42:22 172.31.255.1:root mysqldump --help
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:45:17 172.31.255.1:root mysqldump --default-character-set utf8 -u root --password=9G4K32b64CVZ! --database test2 > /tmp/School.sql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:45:45 172.31.255.1:root mysqldump --default-character-set utf8 -u root --password=9G4K32b64CVZ! -B test2 > /tmp/School.sql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:46:13 172.31.255.1:root mysqldump --default-character-set utf8 -u root -p9G4K32b64CVZ! -B test2 > /tmp/School.sql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:46:27 172.31.255.1:root mysqldump -hlocalhost –uroot -pZ9G4K32b64CVZ!
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:47:23 172.31.255.1:root mysqldump -u root -pZ9G4K32b64CVZ! test2>/home/data.sql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced]#2023-02-23 13:47:30 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:47:32 172.31.255.1:root cd mysqlback/
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:47:32 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:47:51 172.31.255.1:root tar test2.sql.gz
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:48:00 172.31.255.1:root tar -zxvf test2.sql.gz
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:48:02 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:48:53 172.31.255.1:root gzip -dk test2.sql.gz
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:49:35 172.31.255.1:root gzip -d test2.sql.gz
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:49:36 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:49:41 172.31.255.1:root cat test2.sql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:50:26 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ! -e 'show databases'|grep -Ev '^(Database|information_schema|performance_schema)$'|while read db;do mysqldump -u root -pZ9G4K32b64CVZ! $db | gzip > /Synced/mysqlback/$db.sql.gz;done
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:50:28 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:51:11 172.31.255.1:root gzip -dc test2.sql.gz
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:51:26 172.31.255.1:root ll
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:51:29 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:53:39 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:53:49 172.31.255.1:root gzip -dc test2.sql.gz > test2.sql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:53:54 172.31.255.1:root cat test2.sql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:55:39 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 13:59:46 172.31.255.1:root mysqldump --help
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:00:03 172.31.255.1:root history |grep mysql
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:00:13 172.31.255.1:root root mysql -uroot -pZ9G4K32b64CVZ!
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:00:18 172.31.255.1:root mysql -uroot -pZ9G4K32b64CVZ!
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:01:06 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:02:27 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:02:43 172.31.255.1:root journalctl -xe mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:02:46 172.31.255.1:root journalctl -xe
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:03:05 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:03:45 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/1 2023-02-23 14:04 (172.31.255.1):[/root]#2023-02-23 13:15:04 172.31.255.1:root yum -y update kernel
+[euid=root]:root pts/1 2023-02-23 14:04 (172.31.255.1):[/root]#2023-02-23 14:04:57 172.31.255.1:root root mysql -uroot -pZ9G4K32b64CVZ!
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:06:29 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:06:51 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:07:14 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:08:58 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:09:05 172.31.255.1:root systemctl status mysqld.service
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:09:12 172.31.255.1:root systemctl status mysqld.service --l
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:09:18 172.31.255.1:root systemctl status mysqld.service -l
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:09:55 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:10:28 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:12:05 172.31.255.1:root systemctl cat mysqld.service
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:12:41 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:12:57 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:13:10 172.31.255.1:root cat /usr/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:13:15 172.31.255.1:root cat /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:13:34 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:13:48 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:13:55 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:13:55 172.31.255.1:root vim /etc/my.cnf
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:15:32 172.31.255.1:root systemctl restart mysqld
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/var/lib/mysql]#2023-02-23 14:15:51 172.31.255.1:root cd /var/lib/mysql/
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/var/lib/mysql]#2023-02-23 14:15:52 172.31.255.1:root lss
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/var/lib/mysql]#2023-02-23 14:15:53 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/var/lib/mysql]#2023-02-23 14:20:38 172.31.255.1:root mysqldump -uroot -pZ9G4K32b64CVZ! -A -F --single-transaction --master-data=2 |gzip > /Synced/mysqlback/all-`date +%F`.sql.gz
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/var/lib/mysql]#2023-02-23 14:20:48 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:21:07 172.31.255.1:root cd /Synced/mysqlback/
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:21:10 172.31.255.1:root ls
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:21:22 172.31.255.1:root ll all-2023-02-23.sql.gz
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:21:25 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:21:25 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:21:25 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-23 14:21:25 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2023-02-23 13:18 (172.31.255.1):[/Synced/mysqlback]#2023-02-24 09:58:28 172.31.255.1:root free -m
+[euid=vagrant]:vagrant pts/0 2023-12-29 11:36 (10.0.2.2):[/home/vagrant]#2023-02-23 13:07:39 10.0.2.2:vagrant exit
+[euid=vagrant]:vagrant pts/0 2023-12-29 11:36 (10.0.2.2):[/home/vagrant]#2023-12-29 11:36:40 10.0.2.2:vagrant ip a
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-02-23 13:15:04 172.31.255.1:root yum -y update kernel
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:38:37 172.31.255.1:root history
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:39:36 172.31.255.1:root netstat -nltp
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:40:04 172.31.255.1:root lsof -i:3306
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:41:29 172.31.255.1:root
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:41:48 172.31.255.1:root lscpu | grep Virtualization
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:42:38 172.31.255.1:root lsmod |grep kvm
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:42:52 172.31.255.1:root ls -l /dev/kvm
+[euid=root]:root pts/1 2023-12-29 11:38 (172.31.255.1):[/root]#2023-12-29 11:42:59 172.31.255.1:root ls /sys/module/kvm
+[euid=root]:root pts/1 2023-12-29 11:45 (172.31.255.1):[/root]#2023-12-29 11:45:02 172.31.255.1:root exit
+[euid=vagrant]:vagrant pts/0 2023-12-29 11:36 (10.0.2.2):[/home/vagrant]#2023-12-29 11:45:17 10.0.2.2:vagrant vgrant halt
+[euid=vagrant]:vagrant pts/0 2023-12-29 11:36 (10.0.2.2):[/home/vagrant]#2023-12-29 11:45:27 10.0.2.2:vagrant vagrant halt
+[euid=vagrant]:vagrant pts/0 2023-12-29 11:36 (10.0.2.2):[/home/vagrant]#2023-12-29 11:45:27 10.0.2.2:vagrant vagrant halt
+[euid=vagrant]:vagrant pts/0 2023-12-29 11:36 (10.0.2.2):[/home/vagrant]#2023-12-29 11:45:49 10.0.2.2:vagrant vagrant
+[euid=vagrant]:vagrant pts/0 2024-02-05 09:48 (10.0.2.2):[/home/vagrant]#2023-12-29 11:45:52 10.0.2.2:vagrant exit
+[euid=vagrant]:vagrant pts/0 2024-02-05 09:48 (10.0.2.2):[/home/vagrant]#2024-02-05 09:48:30 10.0.2.2:vagrant ip a
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/root]#2023-12-29 11:45:02 172.31.255.1:root exit
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/root]#2024-02-05 09:49:06 172.31.255.1:root ls
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/root]#2024-02-05 09:49:28 172.31.255.1:root ps -ef
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/root]#2024-02-05 09:49:51 172.31.255.1:root ps -ef |grep mysql
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/root]#2024-02-05 09:50:03 172.31.255.1:root history
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/root]#2024-02-05 09:50:49 172.31.255.1:root ls
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/root]#2024-02-05 09:50:55 172.31.255.1:root pwd
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/]#2024-02-05 09:50:57 172.31.255.1:root cd ..
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/]#2024-02-05 09:50:58 172.31.255.1:root ls
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/vagrant]#2024-02-05 09:51:05 172.31.255.1:root cd vagrant/
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/vagrant]#2024-02-05 09:51:05 172.31.255.1:root ls
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/vagrant]#2024-02-05 09:51:10 172.31.255.1:root cat Synced/
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/vagrant]#2024-02-05 09:51:13 172.31.255.1:root ls
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/vagrant]#2024-02-05 09:51:16 172.31.255.1:root cat Vagrantfile
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/]#2024-02-05 09:51:21 172.31.255.1:root cd ..
+[euid=root]:root pts/1 2024-02-05 09:48 (172.31.255.1):[/]#2024-02-05 09:51:22 172.31.255.1:root ls
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/home/vagrant]#2024-02-05 10:01:49 10.0.2.2:vagrant exit
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/home/vagrant]#2024-02-05 10:07:13 10.0.2.2:vagrant ls
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/home/vagrant]#2024-02-05 10:07:20 10.0.2.2:vagrant cd
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/home/vagrant]#2024-02-05 10:07:21 10.0.2.2:vagrant cd .
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/]#2024-02-05 10:07:23 10.0.2.2:vagrant cd /
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/]#2024-02-05 10:07:24 10.0.2.2:vagrant ls
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/Synced]#2024-02-05 10:07:33 10.0.2.2:vagrant cd /Synced/
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/Synced]#2024-02-05 10:07:34 10.0.2.2:vagrant ls
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/]#2024-02-05 10:07:38 10.0.2.2:vagrant cd ..
+[euid=vagrant]:vagrant pts/0 2024-02-05 10:07 (10.0.2.2):[/]#2024-02-05 10:07:39 10.0.2.2:vagrant ls
+[euid=root]:root pts/0 2024-02-05 10:21 (172.31.255.1):[/root]#2024-02-05 09:51:22 172.31.255.1:root ls
+[euid=vagrant]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/home/vagrant]#2024-02-05 10:09:10 172.31.255.251:vagrant exit
+[euid=vagrant]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/home/vagrant]#2024-02-05 10:22:00 172.31.255.251:vagrant ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root]#2024-02-05 09:51:22 172.31.255.251:root ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root]#2024-02-05 09:51:22 172.31.255.251:root ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root]#2024-02-05 10:22:19 172.31.255.251:root ls -a
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:22:31 172.31.255.251:root cd .ssh/
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:22:31 172.31.255.251:root ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:22:44 172.31.255.251:root cat id_rsa
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:22:47 172.31.255.251:root ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:22:54 172.31.255.251:root cat authorized_keys
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:24:39 172.31.255.251:root ls
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root]#2024-02-05 09:51:22 172.31.255.1:root ls
+[euid=vagrant]:vagrant pts/3 2024-02-05 10:26 (172.31.255.1):[/home/vagrant]#2024-02-05 10:09:10 172.31.255.1:vagrant exit
+[euid=root]:vagrant pts/3 2024-02-05 10:26 (172.31.255.1):[/root]#2024-02-05 09:51:22 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root]#2024-02-05 10:26:40 172.31.255.1:root ls /
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root]#2024-02-05 10:26:48 172.31.255.1:root ca /ansible-mac/
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root]#2024-02-05 10:26:49 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible]#2024-02-05 10:27:03 172.31.255.1:root cd ansible/
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible]#2024-02-05 10:27:04 172.31.255.1:root llsss
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible]#2024-02-05 10:27:05 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible/ansible]#2024-02-05 10:27:11 172.31.255.1:root cd ansible/
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible/ansible]#2024-02-05 10:27:11 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible/ansible]#2024-02-05 10:27:25 172.31.255.1:root pwd
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible/ansible]#2024-02-05 10:28:27 172.31.255.1:root cat /etc/grub2.cfg
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible/ansible]#2024-02-05 10:29:02 172.31.255.1:root cat /etc/issue
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible/ansible]#2024-02-05 10:30:54 172.31.255.1:root cat /etc/motd
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:31:12 172.31.255.251:root history
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/root/.ssh]#2024-02-05 10:32:19 172.31.255.251:root ls /
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/ansible-mac]#2024-02-05 10:32:37 172.31.255.251:root cd /ansible-mac/
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/ansible-mac]#2024-02-05 10:32:37 172.31.255.251:root ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/ansible-mac/ansible]#2024-02-05 10:32:40 172.31.255.251:root cd ansible/
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/ansible-mac/ansible]#2024-02-05 10:32:42 172.31.255.251:root ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/ansible-mac/ansible]#2024-02-05 10:32:42 172.31.255.251:root ls
+[euid=root]:vagrant pts/1 2024-02-05 10:21 (172.31.255.251):[/ansible-mac/ansible]#2024-02-05 10:32:46 172.31.255.251:root pwd
+[euid=root]:root pts/2 2024-02-05 10:26 (172.31.255.1):[/root/ansible/ansible]#2024-02-05 10:31:02 172.31.255.1:root vim /etc/motd
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:31:02 172.31.255.1:root vim /etc/motd
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:33:28 172.31.255.1:root ps -ef |grep mysql
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:33:39 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:33:58 172.31.255.1:root systemctl stop mysqld
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:34:04 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:34:10 172.31.255.1:root ps -ef |grep mysql
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:34:23 172.31.255.1:root systemctl disable mysql
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:34:39 172.31.255.1:root systemctl disable mysqld
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:46:07 172.31.255.1:root ansible --hlep
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:46:20 172.31.255.1:root ansible -h
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/root]#2024-02-05 10:46:30 172.31.255.1:root ansible --version
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps]#2024-02-05 11:18:10 172.31.255.1:root cd /apps/
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps]#2024-02-05 11:18:10 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/software]#2024-02-05 11:18:15 172.31.255.1:root cd software/
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/software]#2024-02-05 11:18:15 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps]#2024-02-05 11:18:20 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps]#2024-02-05 11:18:21 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/data]#2024-02-05 11:18:24 172.31.255.1:root cd data/
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/data]#2024-02-05 11:18:25 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps]#2024-02-05 11:18:27 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps]#2024-02-05 11:18:29 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:18:33 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:18:33 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:18:37 172.31.255.1:root cd script/
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:18:38 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:18:45 172.31.255.1:root cat start.sh
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:20:13 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c cluster info
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:20:48 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c cluster nodes
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:21:00 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:22:29 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:23:39 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c set ops_${line} ${line}; done #往集群里面写入一百条数据。
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:23:53 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:25:24 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:25:31 172.31.255.1:root cat createRedisClusterls.exp
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:25:42 172.31.255.1:root cat createRedisClusterls.sh
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:26:01 172.31.255.1:root expect ./createRedisClusterls.exp
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:26:40 172.31.255.1:root /redis-cli --cluster create 172.31.255.251:7000 172.31.255.251:7001 172.31.255.251:7002 172.31.255.251:7003 172.31.255.251:7004 172.31.255.251:7005 --cluster-replicas 1
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:26:52 172.31.255.1:root expect ./createRedisClusterls.exp
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:30:27 172.31.255.1:root # spawn /apps/redis-5.0.5/src/redis-cli --cluster create 172.31.255.251:7000 172.31.255.251:7001 172.31.255.251:7002 172.31.255.251:7003 172.31.255.251:7004 172.31.255.251:7005 --cluster-replicas 1 -a 123456
+[euid=root]:root pts/2 2024-02-05 10:33 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:30:33 172.31.255.1:root spawn /apps/redis-5.0.5/src/redis-cli --cluster create 172.31.255.251:7000 172.31.255.251:7001 172.31.255.251:7002 172.31.255.251:7003 172.31.255.251:7004 172.31.255.251:7005 --cluster-replicas 1 -a 123456
+[euid=root]:root pts/4 2024-02-05 11:33 (172.31.255.1):[/root]#2024-02-05 10:31:02 172.31.255.1:root vim /etc/motd
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/root]#2024-02-05 11:30:48 172.31.255.1:root vim createRedisClusterls.exp
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 11:34:06 172.31.255.1:root cd /apps/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 11:34:06 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:34:11 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:34:12 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:34:15 172.31.255.1:root cd script/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:34:16 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:34:25 172.31.255.1:root vim createRedisClusterls.exp
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:36:24 172.31.255.1:root sh createRedisClusterls.sh
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:40:10 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c set ops_${line} ${line}; done #往集群里面写入一百条数据。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:40:18 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c get ops_${line}; done #读取数据看一下是否能读取到。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:41:11 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c cluster info
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:41:20 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c cluster nodes
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:41:33 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c info
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:42:08 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c get key
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:42:19 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c ttl key
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:43:21 172.31.255.1:root grep "# masterauth" redis.conf
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:43:24 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:43:27 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:43:28 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:43:33 172.31.255.1:root cd 7000
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:43:34 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:43:35 172.31.255.1:root grep "# masterauth" redis.conf
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:43:37 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:43:47 172.31.255.1:root grep "# masterauth" redis.conf
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:43:54 172.31.255.1:root grep "# requirepass" redis.conf
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:44:11 172.31.255.1:root cat redis.conf
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-05 11:44:34 172.31.255.1:root grep "requirepass" redis.conf
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:46:28 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:46:28 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 11:46:30 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 11:46:31 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis-5.0.5]#2024-02-05 11:46:37 172.31.255.1:root cd redis-5.0.5/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis-5.0.5]#2024-02-05 11:46:38 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 11:46:40 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 11:46:41 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:46:45 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 11:46:46 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:46:49 172.31.255.1:root cd script/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:46:50 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:46:55 172.31.255.1:root cat start.sh
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:47:22 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:47:40 172.31.255.1:root sh shutdown.sh
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:47:52 172.31.255.1:root vim shutdown.sh
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:48:51 172.31.255.1:root sh shutdown.sh
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:49:04 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:49:14 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 11:49:14 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:02:01 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:02:01 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:02:04 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:02:04 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/data]#2024-02-05 12:02:12 172.31.255.1:root cd /data/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/data]#2024-02-05 12:02:13 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/]#2024-02-05 12:02:18 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/]#2024-02-05 12:02:18 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:02:24 172.31.255.1:root cd /apps/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:02:24 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:02:24 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:09:08 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c cluster info
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:09:13 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c cluster nodes
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:09:19 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c set ops_${line} ${line}; done #往集群里面写入一百条数据。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:09:25 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c get ops_${line}; done #读取数据看一下是否能读取到。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:09:29 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:09:29 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:09:49 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:09:49 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:09:55 172.31.255.1:root cd script/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:09:55 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:09:58 172.31.255.1:root sh shutdown.sh
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:10:07 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:10:12 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:10:12 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:10:13 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:10:23 172.31.255.1:root rm -f /etc/udev/rules.d/70-persistent-net.rules
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:10:45 172.31.255.1:root cat /etc/udev/rules.d/70-persistent-net.rules
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:10:58 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:11:08 172.31.255.1:root rm -rf redis-5.0.5 redis_cluster
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:13:47 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c set ops_${line} ${line}; done #往集群里面写入一百条数据。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:13:58 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c get ops_${line}; done #读取数据看一下是否能读取到。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:14:06 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:14:14 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:14:15 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:14:19 172.31.255.1:root cd script/
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:14:20 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:14:28 172.31.255.1:root ps -ef |grep reids
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:14:33 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-05 12:14:40 172.31.255.1:root sh shutdown.sh
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:15:02 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps/redis_cluster]#2024-02-05 12:15:03 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:15:06 172.31.255.1:root cd ..
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:15:06 172.31.255.1:root ls
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:15:13 172.31.255.1:root rm -rf redis-6.2.14 redis_cluster
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:20:30 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c set ops_${line} ${line}; done #往集群里面写入一百条数据。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:20:41 172.31.255.1:root for line in {1..100};do redis-cli -h 172.31.255.251 -p 7000 -a 123456 -c get ops_${line}; done #读取数据看一下是否能读取到。
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:34:03 172.31.255.1:root echo "config get *" | redis-cli -a 123456 2>/dev//null
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:34:20 172.31.255.1:root redis-cli -a 123456
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:36:02 172.31.255.1:root echo "config get *" | redis-cli -a 123456
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:36:22 172.31.255.1:root echo "config get *" | redis-cli -h 172.31.255.251 -p 7000 -a 123456
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:36:45 172.31.255.1:root echo "config get *" | redis-cli -h 172.31.255.251 -p 7000 -a 123456 &> /dev/null
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 12:37:05 172.31.255.1:root echo "config get *" | redis-cli -h 172.31.255.251 -p 7000 -a 123456 2>/dev//null
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:07:21 172.31.255.1:root redis-cli
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:09:01 172.31.255.1:root redis-cli -p 7000
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:09:44 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:12:48 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -c
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:16:15 172.31.255.1:root nodes=$(redis-cli -c -h <host> -p <port> CLUSTER NODES | grep "master" | awk '{ print $2 }')
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:16:30 172.31.255.1:root for node in $nodes; do cursor=0; while true; do reply=$(redis-cli -c -h <host> -p <port> --raw SCAN $cursor); cursor=$(echo $reply | awk '{ print $1 }'); keys=$(echo $reply | awk '{ print $2 }'); echo "Keys on $node: $keys"; if [ $cursor -eq 0 ]; then break; fi; done; done
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:19:27 172.31.255.1:root redis-cli --bigkeys
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:34:06 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -c
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:36:43 172.31.255.1:root redis-cli --hlep
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:36:47 172.31.255.1:root redis-cli --help
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:38:27 172.31.255.1:root help all
+[euid=root]:root pts/2 2024-02-05 11:34 (172.31.255.1):[/apps]#2024-02-05 14:38:38 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -c -a 123456
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-05 10:32:46 172.31.255.1:root pwd
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:18:37 172.31.255.1:root history
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:19:49 172.31.255.1:root vim /etc/motd
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:20:37 172.31.255.1:root cat /ec
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:20:37 172.31.255.1:root cat /ec
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:20:37 172.31.255.1:root cat /ec
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:20:39 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:20:43 172.31.255.1:root ls /
+[euid=root]:root pts/0 2024-02-06 14:17 (172.31.255.1):[/root]#2024-02-06 14:20:51 172.31.255.1:root cd Synced
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:19:32 172.31.255.1:root free -h
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:20:17 172.31.255.1:root swapon
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:20:29 172.31.255.1:root sudo swapoff -a
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:20:36 172.31.255.1:root free -h
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:20:44 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:20:59 172.31.255.1:root ll
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:21:09 172.31.255.1:root free -h
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:21:19 172.31.255.1:root rm -rf swapfile
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:21:23 172.31.255.1:root df -h
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:21:48 172.31.255.1:root ll
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:22:00 172.31.255.1:root du -h
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:22:15 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/]#2024-02-06 15:22:52 172.31.255.1:root du -sm ansible-mac apps bin boot data dev etc home lib lib64 media mnt opt proc R root run sbin srv Synced sys tmp Users usr vagrant var 2> /dev/null | sort -nr | head -5
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/usr]#2024-02-06 15:23:34 172.31.255.1:root cd usr
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/usr]#2024-02-06 15:23:39 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/usr]#2024-02-06 15:23:43 172.31.255.1:root ll
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps]#2024-02-06 15:24:02 172.31.255.1:root cd /apps/
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps]#2024-02-06 15:24:07 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:24:17 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:24:22 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:24:30 172.31.255.1:root cd 7003/
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:24:30 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:24:32 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:24:45 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:25:04 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:25:19 172.31.255.1:root grep logfile redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:27:03 172.31.255.1:root grep loglevel redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:28:25 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:28:53 172.31.255.1:root cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:28:58 172.31.255.1:root sed -i 's/^#loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:29:03 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:29:19 172.31.255.1:root sed -i 's/^loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:29:22 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7004]#2024-02-06 15:29:29 172.31.255.1:root cd ../7004
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7004]#2024-02-06 15:29:36 172.31.255.1:root cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7004]#2024-02-06 15:29:36 172.31.255.1:root sed -i 's/^loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7004]#2024-02-06 15:29:37 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7005]#2024-02-06 15:29:43 172.31.255.1:root cd ../7005
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7005]#2024-02-06 15:29:44 172.31.255.1:root cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7005]#2024-02-06 15:29:45 172.31.255.1:root sed -i 's/^loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7005]#2024-02-06 15:29:45 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-06 15:29:55 172.31.255.1:root cd ../7000
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-06 15:29:56 172.31.255.1:root cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-06 15:29:56 172.31.255.1:root sed -i 's/^loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-06 15:29:56 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7000]#2024-02-06 15:29:56 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7001]#2024-02-06 15:30:04 172.31.255.1:root cd ../7001
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7001]#2024-02-06 15:30:05 172.31.255.1:root cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7001]#2024-02-06 15:30:05 172.31.255.1:root sed -i 's/^loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7001]#2024-02-06 15:30:06 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:11 172.31.255.1:root cd ../7002
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:12 172.31.255.1:root cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:12 172.31.255.1:root sed -i 's/^loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:13 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:13 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:19 172.31.255.1:root cd ../cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:19 172.31.255.1:root sed -i 's/^loglevel.*$/loglevel warning/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7002]#2024-02-06 15:30:19 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:30:30 172.31.255.1:root cd ../7003
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:30:31 172.31.255.1:root cp redis.conf redis.conf.bak
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:30:31 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 15:30:31 172.31.255.1:root grep -E "loglevel" redis.conf
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:30:41 172.31.255.1:root cd ..
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:30:41 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 15:30:44 172.31.255.1:root cd script/
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 15:30:44 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 15:30:53 172.31.255.1:root sh shutdown.sh
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 15:31:03 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 15:31:09 172.31.255.1:root sh start.sh
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 15:31:10 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:14 172.31.255.1:root cd ..
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:14 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:20 172.31.255.1:root df -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:24 172.31.255.1:root du -h -d 11
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:30 172.31.255.1:root du -h -d
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:34 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:50 172.31.255.1:root history |grep null
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:31:56 172.31.255.1:root cat /dev/null > 7003/7003.log
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:32:04 172.31.255.1:root cat /dev/null > 7004/7004.log
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:32:07 172.31.255.1:root cat /dev/null > 7005/7005.log
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:32:11 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:32:11 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:32:11 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:32:11 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:16 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 15:32:24 172.31.255.1:root df -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/root]#2024-02-06 15:32:24 172.31.255.1:root df -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/root]#2024-02-06 15:32:24 172.31.255.1:root df -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/root]#2024-02-06 15:32:24 172.31.255.1:root df -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/]#2024-02-06 15:59:17 172.31.255.1:root cd /
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/]#2024-02-06 15:59:25 172.31.255.1:root df -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/]#2024-02-06 15:59:34 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps]#2024-02-06 15:59:55 172.31.255.1:root cd /apps/
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps]#2024-02-06 15:59:55 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps]#2024-02-06 16:00:06 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:00:17 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:00:18 172.31.255.1:root lss
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:00:24 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:00:35 172.31.255.1:root cd 7003
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:00:37 172.31.255.1:root du -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:00:39 172.31.255.1:root ll
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:00:43 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:00:43 172.31.255.1:root ll -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:29:21 172.31.255.1:root tail -f 7003.log
+[euid=root]:root pts/1 2024-02-06 16:29 (172.31.255.1):[/root]#2024-02-06 15:32:24 172.31.255.1:root df -h
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:30:00 172.31.255.1:root redis-cli -h 172.31.255.251 -p 7000 -c -a 123456
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/7003]#2024-02-06 16:31:56 172.31.255.1:root grep requirepass redis.conf
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:32:09 172.31.255.1:root cd ..
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:32:20 172.31.255.1:root grep requirepass 7000/redis.conf 7001/redis.conf 7002/redis.conf 7003/redis.conf 7004/redis.conf 7005/redis.conf
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:33:10 172.31.255.1:root grep masterauth 7000/redis.conf 7001/redis.conf 7002/redis.conf 7003/redis.conf 7004/redis.conf 7005/redis.conf
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:33:40 172.31.255.1:root sed -i 's/^# masterauth.*$/masterauth MjMxY2Y5MDk0NmIx/' redis.conf
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:34:10 172.31.255.1:root sed -i 's/^# masterauth.*$/masterauth 123456/' 7000/redis.conf 7001/redis.conf 7002/redis.conf 7003/redis.conf 7004/redis.conf 7005/redis.conf
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:34:15 172.31.255.1:root grep masterauth 7000/redis.conf 7001/redis.conf 7002/redis.conf 7003/redis.conf 7004/redis.conf 7005/redis.conf
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:34:18 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:34:20 172.31.255.1:root cd script/
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:34:21 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:34:25 172.31.255.1:root cd ..
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:34:39 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:34:49 172.31.255.1:root history |grep null
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:34:56 172.31.255.1:root cd script/
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:34:56 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:34:59 172.31.255.1:root sh shutdown.sh
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:35:19 172.31.255.1:root cat /dev/null > 7003/7003.log
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:35:25 172.31.255.1:root cd ..
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:35:26 172.31.255.1:root cat /dev/null > 7003/7003.log
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:35:31 172.31.255.1:root cat /dev/null > 7004/7004.log
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:35:36 172.31.255.1:root cat /dev/null > 7005/7005.log
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:35:39 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:35:45 172.31.255.1:root cd script/
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:35:45 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:35:50 172.31.255.1:root sh start.sh
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:35:52 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster/script]#2024-02-06 16:35:57 172.31.255.1:root ps -ef |grep redis
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:36:04 172.31.255.1:root cd ..
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:36:05 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:36:10 172.31.255.1:root du -h -d 1
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:36:35 172.31.255.1:root tail -f 7003/7003.log
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:36:35 172.31.255.1:root tail -f 7003/7003.log
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:36:35 172.31.255.1:root tail -f 7003/7003.log
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:40:12 172.31.255.1:root du -h -d 1 /
+[euid=root]:root pts/0 2024-02-06 15:58 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:40:38 172.31.255.1:root du -h -d 1 / | sort -rh
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/root]#2024-02-06 16:40:38 172.31.255.1:root du -h -d 1 / | sort -rh
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/root]#2024-02-06 16:42:43 172.31.255.1:root df -h
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/root]#2024-02-06 16:44:00 172.31.255.1:root duf
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/root]#2024-02-06 16:47:53 172.31.255.1:root history
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/root]#2024-02-06 16:52:54 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/apps]#2024-02-06 16:52:59 172.31.255.1:root cd /apps/
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/apps]#2024-02-06 16:53:00 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:53:06 172.31.255.1:root cd redis_cluster/
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:53:07 172.31.255.1:root ls
+[euid=root]:root pts/0 2024-02-06 16:42 (172.31.255.1):[/apps/redis_cluster]#2024-02-06 16:53:11 172.31.255.1:root du -h -d 1

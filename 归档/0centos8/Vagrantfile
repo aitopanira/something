@@ -1,0 +1,168 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  # config.vm.box = "generic/centos8"
+
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  # config.vm.box_check_update = false
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # NOTE: This will enable public access to the opened port
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine and only allow access
+  # via 127.0.0.1 to disable public access
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  # config.vm.network "private_network", ip: "192.168.33.10"
+
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+  # config.vm.network "public_network"
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+  # config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+  #   vb.memory = "1024"
+  # end
+  #
+  # View the documentation for the provider you are using for more
+  # information on available options.
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
+  
+  $box_version = "generic/centos8"
+
+  $vm_name = "centos8"
+
+# A类地址：10.0.0.0～10.255.255.255
+#
+# B类地址：172.16.0.0～172.31.255.255
+#
+# C类地址：192.168.0.0～192.168.255.255
+  $vm_ip = "172.31.255.253"
+#   $vm_ip = "192.168.56.253"
+  #使用 box 镜像版本
+  #centos/7 virtualbox Virtualbox Guest Additions 6.0.4 提示错误
+  #要么降低Virtualbox版本 要么升级 centos 版本到7.6
+  config.vm.box = $box_version
+  # 启动超时时间，默认300
+  config.vm.boot_timeout=600
+
+  config.vm.provider 'virtualbox' do |vb|
+   vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
+  end
+  # # 指定 ssh 用户名
+  # config.ssh.username = "vagrant"
+  # # 不使用private key 方式，使用密码方式登录
+  # config.ssh.password = "vagrant"
+  # box 是否更新
+  config.vm.box_check_update = false
+  # 设置 ssh 中显示的 hostname
+  # 以下在单机时，别名是生效的 ,这个参数获取不到，直接使用 default
+  config.vm.define :"centos8" do |admin|
+      admin.vm.hostname = $vm_name
+  end
+  # config.vm.hostname = $vm_name
+
+  # 设置固定 ip
+  config.vm.network "private_network", ip: $vm_ip 
+  # config.vm.network "public_network"
+
+  #设置外部访问端口
+  # 这两个端口是如何映射的  nginx 监控的是80端口
+  # config.vm.network "forwarded_port", guest: 6379, host: 6379
+  # config.vm.network "forwarded_port", guest: 3306, host: 3306
+  # config.vm.network "forwarded_port", guest: 1521, host: 1521
+
+  # 挂载新的磁盘 
+  # 先设置环境变量  export VAGRANT_EXPERIMENTAL="disks"
+  # extra_storage 是镜像文件名 extra_storage.vdi
+  # 需要手动挂载磁盘
+  config.vm.disk :disk, size: "10GB", name: "extra_storage"
+
+# 设置virtualbox 参数
+  config.vm.provider "virtualbox" do |v|
+    # 设置启动内存大小 1024 2048 3072 4096 5120
+    v.memory = 5120
+    # 设置启动cpu 个数
+    v.cpus = 3
+    # 设置virtualbox 中显示虚机名称
+    v.name = $vm_name
+  end
+  # 设置同步目录
+  # 默认同步目录
+  # Host path: /Users/husx/Developer/Vagrant/centos7test/ （Vagrantfile所在文件夹）
+  #Guest path: /vagrant
+  # config.vm.synced_folder "./Synced" , "/Synced"
+    # :owner: "www", :group: "www", #设置虚拟机文件所属者和所属组
+    # :mount_options => ["dmode=775", "fmode=664"] #设置文件权限
+  # config.vm.synced_folder "./conf" , "/vagrant"
+
+
+
+  # 调用外部
+  # centos 7 配置脚本
+  # vagrant 
+#   config.vm.provision "shell", path: "bash/centos/centos7config.sh"
+  # nginx 安装启动  第一次安装后，把安装部分代码注掉，
+  # config.vm.provision "shell", path: "bash/docker/docker.sh"
+  #启动docker
+  # config.vm.provision "shell", path: "bash/-cluster-docker-start.sh"
+  config.vm.provision "shell" do |s|
+    s.inline = <<-SHELL
+      # 添加
+      mkdir -p /root/.ssh
+      echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDZiNSr0WCL041exy529tX9PknHDCg9OEgkRB5iMnSYwbydrLk7G70FE4FKGEKMYNaStDnNtfV02rdlps4aHmrV0wqJfFBBrC04JSfUtLxbErzuDbGYgL3gqqiBRWy0cc7e5yo7dVw6f3RbvBQQ3oYeNlmxMYYnH23mxgPqX3JE7zWFKf2b6PhFPxBoIL0g2awEtOX9CRNqFARBJd6BFaHgfn70SYWhOTsBxM6l2Po+JXKEMICISh/ca00RaSsfgVJLcEGSBXP4CV6J6XWCLmmsUE2uMVl6d7JeYsiLpsGDLYM+G+dfr8K9dNnyrnjCecGWd+u8KtSUJxN31A2srkl9REMpHyR+8EaGv7J4SQbJqRr7yyaY2f7rWnw1BZ+mD4kVQ4Kgb8iD4x20Eua2Ph7iSDe4M+j9dSF006ij4pnZX8Lc2V31SfaYui3Uk/bfta8NQkzDm7vybZ5ewlTz3dUfSjP3PEPCsgr4OEmNTzoL/To1m6igl0juY8Sh8YB8oyc= husxwy@163.com" > /root/.ssh/authorized_keys
+      # 更改时区
+      cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+      timedatectl set-timezone Asia/Shanghai
+      echo 'sync time'
+      # 需要 vagrant reload生效
+      sudo sed -i 's|^PasswordAuthentication no|PasswordAuthentication yes|' /etc/ssh/sshd_config
+      cat  /etc/ssh/sshd_config |grep PasswordAuthentication
+      systemctl restart sshd
+      # 设置root密码
+      sudo echo "vagrant" | passwd root --stdin > /dev/null 2>&1
+      #  echo testuser:password|chpasswd 有问题
+    SHELL
+  end
+
+end
